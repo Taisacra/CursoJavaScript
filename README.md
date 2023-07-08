@@ -1,2 +1,2 @@
 # CursoJavaScript
- Curso de JavaScript VC
+ Curso de JavaScript CV
