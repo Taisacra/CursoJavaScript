@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
     <title>Primeiros passos com DOM</title>
     <style>
         body{
-            background-color: aquamarine;
+            background-color: rgb(2, 29, 48);
             color:brown;
-            font: normal 18pt Arial;
+            font: normal 20pt Arial;
         }
     </style>
 </head>
@@ -16,11 +17,22 @@
     <h1>Iniciando  estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript  </p>
-    <div>Clique em mim</div>
-    <script>
-        var p1 = window.document.getElementsByTagName('p')[0];
-        window.document(p1.innerText); // innerText texto que está dentro do elemento p1
-    </script>
+    <div id="msg ">Clique em mim</div> <!-- metodo ID para acessar elemento--> 
+    <div nome="mg ">Clique em mim</div> <!-- metodo nome para acessar elemento-->
+    <div class="m ">Clique em mim</div> <!-- metodo classe para acessar elemento--> 
+    <p>conseguir, menos no elemento script que não vai..</p>
     
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var d = window.document.getElementById('msg')
+        //d.style.background = 'green'
+
+        var b = window.document.getElementsByName('mg')[0]//Como está no plural tenho que informar no [] qual elemento vai ser usado
+        b.innerText = 'Olá'
+        var c = window.document.getElementsByClassName('m')[0]//Como está no plural tenho que informar no [] qual elemento vai ser usado
+        c.innerText = 'Hello'
+    </script>
+  
 </body>
 </html>
