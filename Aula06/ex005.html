@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <title>Primeiros passos com DOM</title>
+    <title>ESTUDOS DOM</title>
     <style>
         body{
-            background-color: rgb(2, 29, 48);
-            color:brown;
-            font: normal 20pt Arial;
+            background: rgb(1, 50, 83);
+            color: antiquewhite;
+            font: normal 15pt Arial;
         }
+        h1, strong {
+            color: brown;
+        }
+        div {
+            color: black;
+        } 
+
     </style>
 </head>
 <body>
-    <h1>Iniciando  estudos com DOM</h1>
+    <h1>Iniciando estudos de DOM</h1>
     <p>Aqui vai o resultado</p>
-    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript  </p>
-    <div id="msg ">Clique em mim</div> <!-- metodo ID para acessar elemento--> 
-    <div nome="mg ">Clique em mim</div> <!-- metodo nome para acessar elemento-->
-    <div class="m ">Clique em mim</div> <!-- metodo classe para acessar elemento--> 
-    <p>conseguir, menos no elemento script que não vai..</p>
-    
-    <script>
-        var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p')[0]
-        var d = window.document.getElementById('msg')
-        //d.style.background = 'green'
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div>Clique em mim</div>
 
-        var b = window.document.getElementsByName('mg')[0]//Como está no plural tenho que informar no [] qual elemento vai ser usado
-        b.innerText = 'Olá'
-        var c = window.document.getElementsByClassName('m')[0]//Como está no plural tenho que informar no [] qual elemento vai ser usado
-        c.innerText = 'Hello'
+    <script>
+        //write escreve no html da pagina 
+       window.document.write('Olá, mundo<br/>');
+       //window.document.write(window.document.URL,'<br/>')
+       //seleção por Marca getElementsByTagName() seleciona mais de um elemento []especifica qual elemento vai ser acessado
+        var p1 = window.document.getElementsByTagName('p')[1];
+        window.document.write('  Esta escrito assim: ' + p1.innerText,'<br/>')
+        var corpo = window.document.body;
+        //corpo.style.background = 'black'
+        //p1.style.color = 'green'
+        window.document.write(p1.innerText,'<br/>') //não inclui o strong não puxa o negrito do html
+        window.document.write(p1.innerHTML) //inclui o strong o comando inteiro com as tags filhas
     </script>
-  
 </body>
 </html>
