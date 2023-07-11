@@ -23,9 +23,11 @@
     <h1>Iniciando estudos de DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div>Clique em mim</div>
+    <!--<div id="msg" class="msg" OU >Clique em mim</div>-->
+    <div id="msg">Clique em mim</div>
 
     <script>
+        //USANDO O ELEMENTO DE ACESSO   getElementsByTagName() plural coloca []
         //write escreve no html da pagina 
        window.document.write('Olá, mundo<br/>');
        //window.document.write(window.document.URL,'<br/>')
@@ -37,6 +39,26 @@
         //p1.style.color = 'green'
         window.document.write(p1.innerText,'<br/>') //não inclui o strong não puxa o negrito do html
         window.document.write(p1.innerHTML) //inclui o strong o comando inteiro com as tags filhas
+
+        /*USANDO O ELEMENTO DE ACESSO   getElementById()
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'*/
+
+
+        /*USANDO O ELEMENTO DE ACESSO   getElementsByclassName() []quando tem mais de um elemento
+           var d = window.document.getElementsByClassName('msg')[0]
+        b.innerText = 'ola'
+        
+        */
+
+        //POR SELETOR no selector quando o indentificador é ID usa # | quando é class usa .
+        d = window.document.querySelector('div#msg') // com class seria ('div.msg')
+        d.style.background = 'yellow'
+
+
+
+
     </script>
 </body>
 </html>
