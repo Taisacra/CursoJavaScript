@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Eventos DOM</title>
     <style>
         div#area {
             background: rgb(29,150,29);
@@ -17,8 +17,34 @@
     </style>
 </head>
 <body>
+    <!--Para disparar os eventos diretamente pelo HTML-->
+    <!--<div id="area" onclick = "clicar()" onmouseenter=" entrar()" onmouseout = "sair()"> <!--clicar() nome do metodo função que vai ser chamada lá no script-->
     <div id="area">
         Interaja...
     </div>
+
+    <script>
+        var area = window.document.getElementById('area')// objt para ficar como escopo global das funções
+        //PARA DISPARAR OS EVENTOS DENTRO DO JS
+        area.addEventListener('Click', clicar)
+        area.addEventListener('enter', entrar) 
+        area.addEventListener('exit', sair)
+
+        function clicar() {//nome da função declarada no html
+            area.innerText = 'Clicou!'   
+            area.style.background = 'red' 
+        }
+        function entrar(){
+            area.innerText = 'Entrou!'
+            area.style.background= 'yellow'
+            area.style.color='black'
+        }
+        function sair(){
+           area.innerText = 'Saiu!'
+           area.style.background= 'green'
+           area.style.color='white'
+        }
+
+    </script>
 </body>
 </html>
