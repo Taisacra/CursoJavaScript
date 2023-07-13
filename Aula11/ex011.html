@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAIS</title>
+    <style>
+        body {
+            background: rgb(6, 61, 70);
+            color: rgb(0, 0, 0);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Verificação de pais</h1>
+    <strong>Vivendo no pais: </strong><input type="text" id="txtpais">
+    <input type="button" value= "Verificar" onclick="verificarPais() ">
+    <div id="res"></div>
+
+    <script>
+        function verificarPais(){
+            var res = window.document.querySelector('div#res')
+            var txtp = window.document.querySelector('input#txtpais')
+            var p = String(txtp.value)
+            res.innerHTML = `Sua moradia atual é no <strong>${p}</strong>`
+
+            if(p == 'Brasil'){
+                res.innerHTML +='<p>Você é brasileiro!</p>'
+            }else{
+                res.innerHTML += '<p>Você é estrangeiro!</p>'
+            }
+
+
+        }
+
+    </script>
+    
+</body>
+</html>
