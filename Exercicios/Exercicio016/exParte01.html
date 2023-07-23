@@ -3,24 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercicio1</title>
+    <title>Vamos contar</title>
     <link rel="stylesheet" href="estilo.css"> <!--CHAMADA PARA O CSS EXTERNO -->
     
 </head>
 <body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Vamos contar</h1>
     </header>
 
 
     <section>
         <div>
-           Testando
+           <p>Inicio:
+                <input type="number" name="txtInicio" id="txtInicio">
+           </p>
+           <p>Fim:
+                <input type="number" name="txtFim" id="txtFim">
+           </p>
+           <p>Passo:
+                <input type="number" name="txtPasso" id="txtPasso">
+           </p>
+           <p>
+            <input type="button" value="Contar" onclick="Contar()">
+           </p>
 
         </div>
-        <div>
-            Olá!
-
+        <div id="res">
+            Preparando contagem...
         </div>
     </section>
 
