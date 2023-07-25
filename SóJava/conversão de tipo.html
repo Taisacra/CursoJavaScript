@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de tipos</title>
+</head>
+<body>
+    <script>
+        
+        //CONVERSÃO DE STRING
+        let value = true;
+        alert(typeof value); // boolean
+
+        value = String(value); 
+        alert(typeof value); 
+
+
+        // CONVERSÃO NUMÉRICA
+        //A conversão numérica em funções e expressões matemáticas ocorre automaticamente
+        alert("6"/"2")
+
+        let str ="123"
+        alert(typeof str)
+
+        let num = Number(str)
+        alert(typeof num)
+
+        //CONVERSÃO BOOLEANA
+        /*Valores que são intuitivamente “vazios”, como 0, uma string vazia, null, undefined, e NaN, tornam-se false.
+            Outros valores tornam-se true.
+        */
+        alert(Boolean("")) //false sem espaço no parenteses
+        alert(Boolean(" "))//true com espaço
+        alert(Boolean(0)) // é diferente de Boolean("0")
+
+        //CONVERSÃO NUMÉRICA, UNÁRIO +
+        let apples ="2"
+        let oranges = "3"
+        alert(+apples + +oranges) //funciona para + e -
+
+        */
+        //INCREMENTAR/DECREMENTAR
+        //Prefixo incrementa e retorna o novo valor 
+        let couter = 1
+        let a = couter++
+        alert(a)
+        
+        //posfixo incrementa e retorna o valor antes do incremento
+        let coute = 1
+        let b = ++coute
+        alert(b)
+        
+
+
+    </script>
+    
+</body>
+</html>
