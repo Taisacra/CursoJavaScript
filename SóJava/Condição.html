@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador condicional '?'</title>
+</head>
+<body>
+    <script>
+        /*O operador condicional (ternário) é o único operador JavaScript que possui três operandos.
+         Este operador é frequentemente usado como um atalho para a instrução if.
+         Sintaxe:  condition ? expr1 : expr2
+
+        condition
+        Uma expressão que é avaliada como true ou false.
+        expr1, expr2
+        Expressões com valores de qualquer tipo.
+        -Se condition é true, o operador retornará o valor de expr1; se não, ele retorna o valor de exp2.*/
+        let age = prompt('Qual sua idade?', '')
+        let accessAllowed = (age > 18)? `${age} anos, você é maior de idade! ` : `${age} anos, você é menor de idade!`
+        alert(accessAllowed)
+
+
+        /*Múltiplo '?'
+        Uma sequência de operadores de ponto de interrogação ?
+        pode retornar um valor que depende de mais de uma condição.*/
+        // ? se(if) e : senao(else)
+        let message = (age < 3)? `${age} anos, Oi, bebê` :
+        (age < 18)? `${age} anos, olá, adolescente!` :
+        (age < 100)? `${age} anos, Saudações jovem!` :
+        `${age} anos, que idade incomum na sociedade atual!`
+        alert(message)
+
+    </script>
+    
+</body>
+</html>
