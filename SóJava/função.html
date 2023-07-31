@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Quando um valor é passado como um parâmetro de função, ele também é chamado de argumento .
+        Em outras palavras, para colocar esses termos em ordem:
+        Um parâmetro é a variável listada entre parênteses na declaração da função (é um termo de tempo de declaração).
+        Um argumento é o valor que é passado para a função quando ela é chamada (é um termo de tempo de chamada).
+        
+        function mensagem(from, text ){
+            alert(`De: ${from} Para:${text}`)
+        }
+
+        from = prompt('De: ')
+        text = prompt('Para: deixe seu recado.')
+        mensagem(from, text)*/
+
+        //Função com parametro e retorno
+
+        function soma(num1, num2) {
+            return num1 + num2
+        }
+        const n1 = Number(prompt('Informe um valor para n1: ')) 
+        const n2 = Number(prompt('Informe um valor para n2: ')) 
+    
+        result = soma(n1,n2)
+        alert(result)
+       
+        
+    </script>
+    
+</body>
+</html>
